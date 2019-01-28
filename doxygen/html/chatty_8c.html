@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Riferimenti per il file chatty.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LOGO.png"/></td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('chatty_8c.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Strutture dati</a> &#124;
+<a href="#define-members">Definizioni</a> &#124;
+<a href="#func-members">Funzioni</a> &#124;
+<a href="#var-members">Variabili</a>  </div>
+  <div class="headertitle">
+<div class="title">Riferimenti per il file chatty.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>File principale del server chatterbox, contiene la routine del thread gestore dei segnali, il controllo dei parametri di ingresso, l'avvio del parser e l'avvio del server.  
+<a href="#details">Continua...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;sys/eventfd.h&gt;</code><br />
+<code>#include &quot;sqlite3.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
+<code>#include &quot;stats.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="connections_8h_source.html">connections.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="message_8h_source.html">message.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ops_8h_source.html">ops.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mystring_8h_source.html">mystring.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="core_8h_source.html">core.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="queries_8h_source.html">queries.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Grafo delle dipendenze di inclusione per chatty.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="chatty_8c__incl.png" border="0" usemap="#chatty_8c" alt=""/></div>
+<map name="chatty_8c" id="chatty_8c">
+<area shape="rect" id="node12" href="config_8h.html" title="File contenente alcune define con valori massimi utilizzabili. " alt="" coords="662,304,735,331"/>
+<area shape="rect" id="node13" href="stats_8h_source.html" title="stats.h" alt="" coords="5,155,72,181"/>
+<area shape="rect" id="node15" href="connections_8h.html" title="interfacce di comunicazione tra client e server (e viceversa) " alt="" coords="992,80,1104,107"/>
+<area shape="rect" id="node16" href="utils_8h.html" title="il seguente file contiene le dichiarazioni delle funzioni necessarie al parsing del file (oltre che a..." alt="" coords="553,155,615,181"/>
+<area shape="rect" id="node18" href="mystring_8h.html" title="contiene la definizione della maggior parte delle stringhe utilizzate " alt="" coords="695,229,787,256"/>
+<area shape="rect" id="node19" href="message_8h.html" title="Contiene il formato del messaggio. " alt="" coords="941,155,1035,181"/>
+<area shape="rect" id="node20" href="ops_8h.html" title="Contiene i codici delle operazioni di richiesta e risposta. " alt="" coords="987,229,1045,256"/>
+<area shape="rect" id="node22" href="core_8h.html" title="file di intestazione del sorgente core.c, contiene alcuni define per l&#39;accesso al database ..." alt="" coords="62,80,125,107"/>
+<area shape="rect" id="node23" href="queries_8h.html" title="il seguente file contiene tutte le interfacce per l&#39;esecuzione delle singole query sul database oltre..." alt="" coords="543,80,625,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Strutture dati</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structarg__wrapper.html">arg_wrapper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">wrapper per il passagio dei parametri al thread signal manager  <a href="structarg__wrapper.html#details">Continua...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definizioni</h2></td></tr>
+<tr class="memitem:a3024ccd4a9af5109d24e6c57565d74a1"><td class="memItemLeft" align="right" valign="top"><a id="a3024ccd4a9af5109d24e6c57565d74a1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_POSIX_C_SOURCE</b>&#160;&#160;&#160;200809L</td></tr>
+<tr class="separator:a3024ccd4a9af5109d24e6c57565d74a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369266c24eacffb87046522897a570d5"><td class="memItemLeft" align="right" valign="top"><a id="a369266c24eacffb87046522897a570d5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_GNU_SOURCE</b></td></tr>
+<tr class="separator:a369266c24eacffb87046522897a570d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funzioni</h2></td></tr>
+<tr class="memitem:a9208688f7e447f916477b4528b80efeb"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chatty_8c.html#a9208688f7e447f916477b4528b80efeb">signal_manager</a> (void *arg)</td></tr>
+<tr class="memdesc:a9208688f7e447f916477b4528b80efeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">routine del thread adibito a gestore dei segnali  <a href="#a9208688f7e447f916477b4528b80efeb">Continua...</a><br /></td></tr>
+<tr class="separator:a9208688f7e447f916477b4528b80efeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chatty_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">main function, controlla i parametri in ingresso, setta il signal manager, avvia il server (chiama il memory manager?)  <a href="#a0ddf1224851353fc92bfbff6f499fa97">Continua...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variabili</h2></td></tr>
+<tr class="memitem:a9e4166354e886d074465ab1bb87ca0e2"><td class="memItemLeft" align="right" valign="top"><a id="a9e4166354e886d074465ab1bb87ca0e2"></a>
+struct <a class="el" href="structstatistics.html">statistics</a>&#160;</td><td class="memItemRight" valign="bottom"><b>chattyStats</b> = {0, 0, 0, 0, 0, 0, 0}</td></tr>
+<tr class="separator:a9e4166354e886d074465ab1bb87ca0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
+<div class="textblock"><p>File principale del server chatterbox, contiene la routine del thread gestore dei segnali, il controllo dei parametri di ingresso, l'avvio del parser e l'avvio del server. </p>
+<dl class="section author"><dt>Autore</dt><dd>Marco Costa - 545144 - <a href="#" onclick="location.href='mai'+'lto:'+'mcs'+'x9'+'7@g'+'ma'+'il.'+'co'+'m'; return false;">mcsx9<span style="display: none;">.nosp@m.</span>7@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>05.2018</dd></dl>
+<dl class="section note"><dt>Nota</dt><dd>Si dichiara che l'opera è in ogni sua parte (eccetto ove specificato) opera originale dell'autore </dd></dl>
+</div><h2 class="groupheader">Documentazione delle funzioni</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>main function, controlla i parametri in ingresso, setta il signal manager, avvia il server (chiama il memory manager?) </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>3 </td></tr>
+    <tr><td class="paramname">argv</td><td>./progname -f conffile </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Restituisce</dt><dd>int (EXIT_FAILURE) errore, (EXIT_SUCCESS) programma terminato con successo a seguito di un segnale di terminazione SIGINT </dd></dl>
+<hr/>
+<p> gestione dei segnali</p>
+<p>When signal handling needs to be performed on a regular base in a multithreaded environment, an interesting approach is to delegate all signals to a separate thread doing nothing else but waiting for signals to arrive using sigwait().</p>
+<p>To do so:</p>
+<ol type="1">
+<li>Set the signal mask as per the signals you want to handle using pthread_sigmask() in the "main" thread prior to anything else.</li>
+<li>Then create the thread to handle the signals.</li>
+<li>Then block all signals from 1. in the "main" thread by using pthread_sigmask() again.</li>
+<li><p class="startli">And finally create all other threads.</p>
+<p class="startli">The result would be that all signals specified under 1. would go to the thread created under 2.. All other threads would not receive any of the signals specified under 1.. </p><hr/>
+</li>
+</ol>
+<p>server lanciato con file di configurazione</p>
+<p>avvio senza file di configurazione, imposto la configurazione di default (in conf.h)</p>
+<p>avvio il server passandogli come parametro la configurazione e il descrittore di comunicazione</p>
+<p>pulizia delle strutture di configurazione</p>
+
+</div>
+</div>
+<a id="a9208688f7e447f916477b4528b80efeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9208688f7e447f916477b4528b80efeb">&#9670;&nbsp;</a></span>signal_manager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* signal_manager </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>routine del thread adibito a gestore dei segnali </p>
+<ul>
+<li>ignora SIGTRAP e SIGPIPE</li>
+<li>in attesa finché non arrivano SIGUSR1 o segnali di terminazione</li>
+</ul>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td><a class="el" href="structarg__wrapper.html" title="wrapper per il passagio dei parametri al thread signal manager ">arg_wrapper</a> contenente il descrittore sul quale è attivo il canale di comunicazione verso il server e il set di segnali in ascolto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Restituisce</dt><dd>void* </dd></dl>
+<p>segnale di terminazione, avviso il server scrivendo sul descrittore fasullo un valore &gt; 0 in modo da svegliarlo dalla select</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_7eb09e58583f359e753ec9733cdd3f32.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_54a8060bc8aa01dfa0d9ee13ff60f29f.html">uni</a></li><li class="navelem"><a class="el" href="dir_08359bf166842ccf4e471107b12c3c16.html">sol</a></li><li class="navelem"><a class="el" href="dir_17dccd5f417ff9173286ea52caa014dd.html">progetto</a></li><li class="navelem"><a class="el" href="chatty_8c.html">chatty.c</a></li>
+    <li class="footer">Generato da
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

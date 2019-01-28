@@ -1,0 +1,13 @@
+<map id="core.c" name="core.c">
+<area shape="rect" id="node17" href="$core_8h.html" title="file di intestazione del sorgente core.c, contiene alcuni define per l&#39;accesso al database ..." alt="" coords="198,80,261,107"/>
+<area shape="rect" id="node19" href="$utils_8h.html" title="il seguente file contiene le dichiarazioni delle funzioni necessarie al parsing del file (oltre che a..." alt="" coords="287,155,350,181"/>
+<area shape="rect" id="node21" href="$config_8h.html" title="File contenente alcune define con valori massimi utilizzabili. " alt="" coords="382,304,455,331"/>
+<area shape="rect" id="node25" href="$queries_8h.html" title="il seguente file contiene tutte le interfacce per l&#39;esecuzione delle singole query sul database oltre..." alt="" coords="417,80,500,107"/>
+<area shape="rect" id="node28" href="$ops_8h.html" title="Contiene i codici delle operazioni di richiesta e risposta. " alt="" coords="773,229,830,256"/>
+<area shape="rect" id="node29" href="$queues_8h.html" title="fornisce astrazione alla componente CORE e ai relativi slave circa l&#39;utilizzo delle code di comunicaz..." alt="" coords="910,80,991,107"/>
+<area shape="rect" id="node31" href="$slaves_8h.html" title="il seguente file contiene gli header necessari all&#39;esecuzione e alla creazione/distruzione delle riso..." alt="" coords="1067,80,1143,107"/>
+<area shape="rect" id="node32" href="$connections_8h.html" title="interfacce di comunicazione tra client e server (e viceversa) " alt="" coords="723,80,835,107"/>
+<area shape="rect" id="node23" href="$stats_8h_source.html" title="stats.h" alt="" coords="145,155,212,181"/>
+<area shape="rect" id="node22" href="$mystring_8h.html" title="contiene la definizione della maggior parte delle stringhe utilizzate " alt="" coords="331,229,423,256"/>
+<area shape="rect" id="node27" href="$message_8h.html" title="Contiene il formato del messaggio. " alt="" coords="727,155,820,181"/>
+</map>

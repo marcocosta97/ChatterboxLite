@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title> File sorgente connections.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LOGO.png"/></td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('connections_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">connections.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="connections_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * chatterbox Progetto del corso di LSO 2017/2018</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Dipartimento di Informatica Università di Pisa</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Docenti: Prencipe, Torquati</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * </span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef CONNECTIONS_H_</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define CONNECTIONS_H_</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define MAX_RETRIES 10</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define MAX_SLEEPING 3</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#if !defined(UNIX_PATH_MAX)</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define UNIX_PATH_MAX 64</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="message_8h.html">message.h</a>&quot;</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">int</span> <a class="code" href="connections_8h.html#a93ad31c416b2e2055827e5f684e89daf">openConnection</a>(<span class="keywordtype">char</span> *path, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ntimes, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> secs);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">int</span> <a class="code" href="connections_8h.html#af87ab52da3284f665b6e743f7a5774e2">sendHeader</a>(<span class="keywordtype">int</span> fd, <a class="code" href="structmessage__hdr__t.html">message_hdr_t</a> *hdr);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// -------- server side -----</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span><span class="keywordtype">int</span> <a class="code" href="connections_8h.html#a2a15cc3debfd6700ea0f40a198c55c85">readHeader</a>(<span class="keywordtype">long</span> connfd, <a class="code" href="structmessage__hdr__t.html">message_hdr_t</a> *hdr);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">int</span> <a class="code" href="connections_8h.html#acf5cb8379636265d11a008d6aa94dc30">readData</a>(<span class="keywordtype">long</span> fd, <a class="code" href="structmessage__data__t.html">message_data_t</a> *<a class="code" href="structdata.html">data</a>);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">int</span> <a class="code" href="connections_8h.html#a2fc6b845d44636fb241a848e58c83420">readMsg</a>(<span class="keywordtype">long</span> fd, <a class="code" href="structmessage__t.html">message_t</a> *msg);</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">/* da completare da parte dello studente con altri metodi di interfaccia */</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">int</span> <a class="code" href="connections_8h.html#aa799ca1f418cde6962cde4291a4a31a9">sendMessage</a>(<span class="keywordtype">int</span> fd, <a class="code" href="structmessage__t.html">message_t</a> *msg);</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">// ------- client side ------</span></div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"></span><span class="keywordtype">int</span> <a class="code" href="connections_8h.html#a3c23eb25de2ae8b5216eb6dd847521c0">sendRequest</a>(<span class="keywordtype">long</span> fd, <a class="code" href="structmessage__t.html">message_t</a> *msg);</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">int</span> <a class="code" href="connections_8h.html#a7812cf59eeeaa63ce7d7b9ce93125462">sendData</a>(<span class="keywordtype">long</span> fd, <a class="code" href="structmessage__data__t.html">message_data_t</a> *msg);</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#include &lt;sys/un.h&gt;</span></div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keywordtype">void</span> <a class="code" href="connections_8h.html#a7eba770ea7cb6152d2da96acb3daaba2">init_sockaddr</a>(<span class="keyword">struct</span> sockaddr_un *sa, <span class="keywordtype">char</span> *sockname);</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CONNECTIONS_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="connections_8h_html_af87ab52da3284f665b6e743f7a5774e2"><div class="ttname"><a href="connections_8h.html#af87ab52da3284f665b6e743f7a5774e2">sendHeader</a></div><div class="ttdeci">int sendHeader(int fd, message_hdr_t *hdr)</div><div class="ttdoc">invia l&amp;#39;header del messaggio </div><div class="ttdef"><b>Definition:</b> connections.c:113</div></div>
+<div class="ttc" id="connections_8h_html_a93ad31c416b2e2055827e5f684e89daf"><div class="ttname"><a href="connections_8h.html#a93ad31c416b2e2055827e5f684e89daf">openConnection</a></div><div class="ttdeci">int openConnection(char *path, unsigned int ntimes, unsigned int secs)</div><div class="ttdoc">Apre una connessione AF_UNIX verso il server. </div><div class="ttdef"><b>Definition:</b> connections.c:44</div></div>
+<div class="ttc" id="structmessage__data__t_html"><div class="ttname"><a href="structmessage__data__t.html">message_data_t</a></div><div class="ttdef"><b>Definition:</b> message.h:69</div></div>
+<div class="ttc" id="connections_8h_html_a2a15cc3debfd6700ea0f40a198c55c85"><div class="ttname"><a href="connections_8h.html#a2a15cc3debfd6700ea0f40a198c55c85">readHeader</a></div><div class="ttdeci">int readHeader(long connfd, message_hdr_t *hdr)</div><div class="ttdoc">Legge l&amp;#39;header del messaggio. </div><div class="ttdef"><b>Definition:</b> connections.c:151</div></div>
+<div class="ttc" id="message_8h_html"><div class="ttname"><a href="message_8h.html">message.h</a></div><div class="ttdoc">Contiene il formato del messaggio. </div></div>
+<div class="ttc" id="connections_8h_html_acf5cb8379636265d11a008d6aa94dc30"><div class="ttname"><a href="connections_8h.html#acf5cb8379636265d11a008d6aa94dc30">readData</a></div><div class="ttdeci">int readData(long fd, message_data_t *data)</div><div class="ttdoc">Legge il body del messaggio. </div><div class="ttdef"><b>Definition:</b> connections.c:249</div></div>
+<div class="ttc" id="utils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div><div class="ttdoc">il seguente file contiene le dichiarazioni delle funzioni necessarie al parsing del file (oltre che a...</div></div>
+<div class="ttc" id="connections_8h_html_a2fc6b845d44636fb241a848e58c83420"><div class="ttname"><a href="connections_8h.html#a2fc6b845d44636fb241a848e58c83420">readMsg</a></div><div class="ttdeci">int readMsg(long fd, message_t *msg)</div><div class="ttdoc">Legge l&amp;#39;intero messaggio. </div><div class="ttdef"><b>Definition:</b> connections.c:319</div></div>
+<div class="ttc" id="structmessage__hdr__t_html"><div class="ttname"><a href="structmessage__hdr__t.html">message_hdr_t</a></div><div class="ttdef"><b>Definition:</b> message.h:43</div></div>
+<div class="ttc" id="connections_8h_html_a3c23eb25de2ae8b5216eb6dd847521c0"><div class="ttname"><a href="connections_8h.html#a3c23eb25de2ae8b5216eb6dd847521c0">sendRequest</a></div><div class="ttdeci">int sendRequest(long fd, message_t *msg)</div><div class="ttdoc">Invia un messaggio di richiesta al server. </div><div class="ttdef"><b>Definition:</b> connections.c:347</div></div>
+<div class="ttc" id="connections_8h_html_aa799ca1f418cde6962cde4291a4a31a9"><div class="ttname"><a href="connections_8h.html#aa799ca1f418cde6962cde4291a4a31a9">sendMessage</a></div><div class="ttdeci">int sendMessage(int fd, message_t *msg)</div><div class="ttdoc">invia un intero messaggio al client </div></div>
+<div class="ttc" id="connections_8h_html_a7eba770ea7cb6152d2da96acb3daaba2"><div class="ttname"><a href="connections_8h.html#a7eba770ea7cb6152d2da96acb3daaba2">init_sockaddr</a></div><div class="ttdeci">void init_sockaddr(struct sockaddr_un *sa, char *sockname)</div><div class="ttdoc">inizializza la struttura sockaddr </div><div class="ttdef"><b>Definition:</b> connections.c:361</div></div>
+<div class="ttc" id="structmessage__t_html"><div class="ttname"><a href="structmessage__t.html">message_t</a></div><div class="ttdef"><b>Definition:</b> message.h:82</div></div>
+<div class="ttc" id="structdata_html"><div class="ttname"><a href="structdata.html">data</a></div><div class="ttdoc">body del messaggio </div></div>
+<div class="ttc" id="connections_8h_html_a7812cf59eeeaa63ce7d7b9ce93125462"><div class="ttname"><a href="connections_8h.html#a7812cf59eeeaa63ce7d7b9ce93125462">sendData</a></div><div class="ttdeci">int sendData(long fd, message_data_t *msg)</div><div class="ttdoc">Invia il body del messaggio al server. </div><div class="ttdef"><b>Definition:</b> connections.c:185</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_7eb09e58583f359e753ec9733cdd3f32.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_54a8060bc8aa01dfa0d9ee13ff60f29f.html">uni</a></li><li class="navelem"><a class="el" href="dir_08359bf166842ccf4e471107b12c3c16.html">sol</a></li><li class="navelem"><a class="el" href="dir_17dccd5f417ff9173286ea52caa014dd.html">progetto</a></li><li class="navelem"><a class="el" href="connections_8h.html">connections.h</a></li>
+    <li class="footer">Generato da
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

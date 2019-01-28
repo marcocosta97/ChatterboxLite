@@ -1,0 +1,8 @@
+<map id="connections.h" name="connections.h">
+<area shape="rect" id="node2" href="$chatty_8c.html" title="File principale del server chatterbox, contiene la routine del thread gestore dei segnali..." alt="" coords="5,80,77,107"/>
+<area shape="rect" id="node3" href="$client_8c.html" title="Semplice client di test. " alt="" coords="101,80,171,107"/>
+<area shape="rect" id="node4" href="$connections_8c.html" title="il seguente file contiene l&#39;implementazione delle interfacce fornite e l&#39;aggiunta di altre funzioni n..." alt="" coords="195,80,306,107"/>
+<area shape="rect" id="node5" href="$core_8c.html" title="contiene: " alt="" coords="331,80,392,107"/>
+<area shape="rect" id="node6" href="$driver_8c.html" title="semplice batteria di test sul server e la coda realizzate prima di poter eseguire i test forniti ..." alt="" coords="417,80,487,107"/>
+<area shape="rect" id="node7" href="$slaves_8c.html" title="il seguente file contiene: &#45;l&#39;implementazione delle interfacce di creazione/distruzione del pool di t..." alt="" coords="512,80,587,107"/>
+</map>

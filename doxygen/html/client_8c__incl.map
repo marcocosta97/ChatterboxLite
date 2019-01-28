@@ -1,0 +1,8 @@
+<map id="client.c" name="client.c">
+<area shape="rect" id="node14" href="$connections_8h.html" title="interfacce di comunicazione tra client e server (e viceversa) " alt="" coords="400,80,512,107"/>
+<area shape="rect" id="node21" href="$ops_8h.html" title="Contiene i codici delle operazioni di richiesta e risposta. " alt="" coords="322,229,379,256"/>
+<area shape="rect" id="node15" href="$utils_8h.html" title="il seguente file contiene le dichiarazioni delle funzioni necessarie al parsing del file (oltre che a..." alt="" coords="565,155,627,181"/>
+<area shape="rect" id="node19" href="$message_8h.html" title="Contiene il formato del messaggio. " alt="" coords="237,155,331,181"/>
+<area shape="rect" id="node17" href="$config_8h.html" title="File contenente alcune define con valori massimi utilizzabili. " alt="" coords="475,304,549,331"/>
+<area shape="rect" id="node18" href="$mystring_8h.html" title="contiene la definizione della maggior parte delle stringhe utilizzate " alt="" coords="550,229,642,256"/>
+</map>

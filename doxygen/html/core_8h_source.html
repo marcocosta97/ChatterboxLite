@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title> File sorgente core.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="LOGO.png"/></td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('core_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">core.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="core_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef _CORE_H_</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define _CORE_H_</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define CORE_NAME &quot;CORE&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;sqlite3.h&quot;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef DB_NAME</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define DB_NAME &quot;/tmp/chatterboxdb&quot;</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef WAL_MODE</span></div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="core_8h.html#ad550aaabcfb179c60d40b2821aa3f41f">   29</a></span>&#160;<span class="preprocessor">#define JOURNAL_MODE &quot;MEMORY&quot;</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifdef WAL_MODE</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define JOURNAL_MODE &quot;WAL&quot;</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">int</span> <a class="code" href="core_8h.html#abd2d0298495ba5db4a003167fa032f2a">open_db</a>(sqlite3 **db);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="core_8h.html#a1ac817bfeed2cc83598aa74059dd7aef">stop_server</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">int</span> <a class="code" href="core_8h.html#afb50ff1eda92eaf2a46e9ba510217239">start_core</a>(<a class="code" href="structconf__param__s.html">conf_param</a> *conf, <span class="keywordtype">int</span> efd);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> <a class="code" href="core_8h.html#a8aa49f6029b8a80e1064bf5137894e4c">stop_core</a>();</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &quot;stats.h&quot;</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">struct </span><a class="code" href="structstatistics.html">statistics</a> <a class="code" href="core_8h.html#a8b6c3e119adb2742d5abfd832fcb88c5">retrieve_stats</a>();</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="core_8h.html#ae2a89cf3e44114fd7ca99048d6c4a36e">get_filepath</a>();</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">int</span> <a class="code" href="core_8h.html#a829a4e5d867af76c2b5800d214430d10">get_maxmsgs</a>();</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="core_8h.html#a8963927940ef9d9e501c59fe936d5acc">get_statsfile</a>();</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="structconf__param__s_html"><div class="ttname"><a href="structconf__param__s.html">conf_param_s</a></div><div class="ttdoc">struttura contenente i dati di configurazione di default se non dichiarati nel file di configurazione...</div><div class="ttdef"><b>Definition:</b> utils.h:30</div></div>
+<div class="ttc" id="core_8h_html_afb50ff1eda92eaf2a46e9ba510217239"><div class="ttname"><a href="core_8h.html#afb50ff1eda92eaf2a46e9ba510217239">start_core</a></div><div class="ttdeci">int start_core(conf_param *conf, int efd)</div><div class="ttdoc">routine principale del server, inizializza le risorse neccessarie, dopodiché riceve i messaggi e li i...</div><div class="ttdef"><b>Definition:</b> core.c:276</div></div>
+<div class="ttc" id="core_8h_html_ae2a89cf3e44114fd7ca99048d6c4a36e"><div class="ttname"><a href="core_8h.html#ae2a89cf3e44114fd7ca99048d6c4a36e">get_filepath</a></div><div class="ttdeci">char * get_filepath()</div><div class="ttdoc">restituisce il filepath dove memorizzare i file </div><div class="ttdef"><b>Definition:</b> core.c:77</div></div>
+<div class="ttc" id="utils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div><div class="ttdoc">il seguente file contiene le dichiarazioni delle funzioni necessarie al parsing del file (oltre che a...</div></div>
+<div class="ttc" id="core_8h_html_a1ac817bfeed2cc83598aa74059dd7aef"><div class="ttname"><a href="core_8h.html#a1ac817bfeed2cc83598aa74059dd7aef">stop_server</a></div><div class="ttdeci">void stop_server()</div><div class="ttdoc">indica la terminazione del server </div><div class="ttdef"><b>Definition:</b> core.c:490</div></div>
+<div class="ttc" id="core_8h_html_a829a4e5d867af76c2b5800d214430d10"><div class="ttname"><a href="core_8h.html#a829a4e5d867af76c2b5800d214430d10">get_maxmsgs</a></div><div class="ttdeci">int get_maxmsgs()</div><div class="ttdoc">restituisce il numero di messaggi massimi nella history </div><div class="ttdef"><b>Definition:</b> core.c:73</div></div>
+<div class="ttc" id="structstatistics_html"><div class="ttname"><a href="structstatistics.html">statistics</a></div><div class="ttdef"><b>Definition:</b> stats.h:14</div></div>
+<div class="ttc" id="core_8h_html_a8aa49f6029b8a80e1064bf5137894e4c"><div class="ttname"><a href="core_8h.html#a8aa49f6029b8a80e1064bf5137894e4c">stop_core</a></div><div class="ttdeci">void stop_core()</div><div class="ttdoc">chiude le comunicazioni client -&gt; server e core -&gt; slave </div><div class="ttdef"><b>Definition:</b> core.c:500</div></div>
+<div class="ttc" id="core_8h_html_abd2d0298495ba5db4a003167fa032f2a"><div class="ttname"><a href="core_8h.html#abd2d0298495ba5db4a003167fa032f2a">open_db</a></div><div class="ttdeci">int open_db(sqlite3 **db)</div><div class="ttdoc">restituisce un handler al database </div><div class="ttdef"><b>Definition:</b> core.c:89</div></div>
+<div class="ttc" id="core_8h_html_a8b6c3e119adb2742d5abfd832fcb88c5"><div class="ttname"><a href="core_8h.html#a8b6c3e119adb2742d5abfd832fcb88c5">retrieve_stats</a></div><div class="ttdeci">struct statistics retrieve_stats()</div><div class="ttdoc">restituisce la statistiche correnti del server </div></div>
+<div class="ttc" id="core_8h_html_a8963927940ef9d9e501c59fe936d5acc"><div class="ttname"><a href="core_8h.html#a8963927940ef9d9e501c59fe936d5acc">get_statsfile</a></div><div class="ttdeci">char * get_statsfile()</div><div class="ttdoc">restituisce la path del file dove inserire le statistiche </div><div class="ttdef"><b>Definition:</b> core.c:82</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_7eb09e58583f359e753ec9733cdd3f32.html">Dropbox</a></li><li class="navelem"><a class="el" href="dir_54a8060bc8aa01dfa0d9ee13ff60f29f.html">uni</a></li><li class="navelem"><a class="el" href="dir_08359bf166842ccf4e471107b12c3c16.html">sol</a></li><li class="navelem"><a class="el" href="dir_17dccd5f417ff9173286ea52caa014dd.html">progetto</a></li><li class="navelem"><a class="el" href="core_8h.html">core.h</a></li>
+    <li class="footer">Generato da
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>
